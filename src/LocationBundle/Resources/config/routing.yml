@@ -1,0 +1,63 @@
+pint_distribution_homepage:
+    path:     /
+    defaults: { _controller: LocationBundle:Default:index }
+
+getAllLPoint:
+    path:     /getAllLPoint
+    defaults: { _controller: LocationBundle:PointDistribution:getAllLPoint }
+
+addPointDistribution:
+    path:     /addPointDistribution
+    defaults: { _controller: LocationBundle:PointDistribution:addPointDistribution }
+
+
+deletePointDistribution:
+    path:     /deletePointDistribution/{id}
+    defaults: { _controller: LocationBundle:PointDistribution:deletePointDistribution }
+
+getOnePointDistribution:
+    path:     /getOnePointDistribution/{id}
+    defaults: { _controller: LocationBundle:PointDistribution:getOnePointDistribution }
+
+
+
+
+updategetPointDistribution:
+    path:     /updategetPointDistribution/{id}
+    defaults: { _controller: LocationBundle:PointDistribution:updategetPointDistribution }
+
+
+
+getAllLVelot:
+    path:     /getAllLVelot
+    defaults: { _controller: LocationBundle:VeloLouer:getAllLVelot }
+
+
+addVeloAction:
+    path:     /addVeloAction
+    defaults: { _controller: LocationBundle:VeloLouer:addVelo }
+
+
+deleteVeloAction:
+    path:     /deleteVeloAction/{id}
+    defaults: { _controller: LocationBundle:VeloLouer:deleteVelo }
+
+updategetVeloAction:
+    path:     /updategetVeloAction/{id}
+    defaults: { _controller: LocationBundle:VeloLouer:updategetVelo }
+
+
+getOneVeloAction:
+    path:     /getOneVeloAction/{id}
+    defaults: { _controller: LocationBundle:VeloLouer:getOneVelo }
+
+
+
+
+
+
+
+
+
+
+
