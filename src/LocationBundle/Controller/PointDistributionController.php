@@ -79,6 +79,7 @@ return new JsonResponse(["msg"=>"success"],200);
     return new JsonResponse(["velo louer "],200);
 }
 
+
     public function annulerLocationVeloAction(Request $request, $id)
     {
         $em=$this->getDoctrine()->getManager();
