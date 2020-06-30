@@ -2,7 +2,9 @@
 
 namespace LocationBundle\Controller;
 
+use Doctrine\DBAL\Types\BooleanType;
 use LocationBundle\Entity\PointDistribution;
+use LocationBundle\Entity\VeloLouer;
 use LocationBundle\LocationBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -64,6 +66,43 @@ $em->persist($point);
 $em->flush();
 return new JsonResponse(["msg"=>"success"],200);
 }
+
+
+    public function louerVeloAction(Request $request, $id)
+{
+    $em=$this->getDoctrine()->getManager();
+    $velo=$em->getRepository(VeloLouer::class)->find($id);
+    $data=$request->getContent();
+    $velo->setDisponible(false);
+    $em->persist($velo);
+    $em->flush();
+    return new JsonResponse(["velo louer "],200);
+}
+
+    public function annulerLocationVeloAction(Request $request, $id)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $velo=$em->getRepository(VeloLouer::class)->find($id);
+        $data=$request->getContent();
+        $velo->setDisponible(true);
+        $em->persist($velo);
+        $em->flush();
+        return new JsonResponse(["location annuler"],200);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

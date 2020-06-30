@@ -53,6 +53,19 @@ getOneVeloAction:
 
 
 
+louerVeloAction:
+    path:     /louerVeloAction/{id}
+    defaults: { _controller: LocationBundle:PointDistribution:louerVelo }
+
+
+
+
+annulerLocationVeloAction:
+    path:     /annulerLocationVeloAction/{id}
+    defaults: { _controller: LocationBundle:PointDistribution:annulerLocationVelo }
+
+
+
 
 
 
